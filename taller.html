@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Taller 4</title>
+        <link rel="stylesheet" href="./bootstrap-5.3.0-alpha3-dist/css/bootstrap.min.css"></link>
+        <link rel="stylesheet" href="estilo.css">
+    </head>
+
+    <body>
+        <!-- NAVBAR -->
+        <nav class="navbar navbar-expand-sm" style="background-color: #8ecfe6;">
+
+            <!-- BOTONES --> 
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav mx-auto ">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#Nosotros">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#AgendarHora">Reserva de Horas</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#Horas">Horas Agendadas</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#TablaMedicos">Médicos y Especialidades</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#Acceso">Acceso Médicos</a>
+                </li>
+              </ul>
+            </div>
+        </nav>
+
+        <!-- TEXTO DE NOSOTROS -->
+        <div id="Nosotros">
+            <div class="container">
+                <h1 class="text-center text-white mt-5 rounded-3 "> Quienes Somos </h1>
+            </div>
+            <div class="container-fluid text-center">
+                <div class="row">
+                    <div class="col-8 mx-auto">
+                        <p class="text-center">
+                            Somos un grupo de estudiantes de Ingeniería Civil en Bioinformática de la Universidad de Talca que actualmente se encuentra desarrollando un proyecto de desarrollo web basado en html con bootstrap 5. Nuestro equipo de trabajo se compone actualmente por Valery Chaparro, Dante Aguirre y Michelle Valdés, todos estudiantes de 4 año.
+                        </p>
+                    </div>
+                </div>
+            <div class="container">
+                <h1 class="text-center text-white mt-5 rounded-3 " > Objetivos </h1>
+            </div>
+            <div class="container-fluid text-center">
+                <div class="row">
+                    <div class="col-8 mx-auto">
+                        <p class="text-center">
+                            Desarrollar una plataforma web que permita la gestión de un posible centro médico o clínica, que permita a los pacientes agendar y consultar horas con médicos de especialidad.
+                        </p>
+                    </div>
+                </div>
+            <div class="container">
+                <h1 class="text-center text-white mt-5 rounded-3 " > Alcance del proyecto </h1>
+            </div>
+            <div class="container-fluid text-center">
+                <div class="row">
+                    <div class="col-8 mx-auto">
+                        <p class="text-center">
+                            El alcance de este proyecto es de desarrollar una plataforma que permita el agendado de horas médicas en una base de datos, la consulta de esta misma y también la gestión de médicos disponibles en la clínica. Además permitirá a los medicos tener un registro fácil y accesible a la ficha clínica de sus pacientes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- FORMULARIO DE HORAS -->
+        <div id="AgendarHora" style="background-color: #ddffff">
+        <div class="container">
+            <div class="row">
+                <div class="col-8 mx-auto">
+                    <h2 class="text-center text-white rounded-3 m-4 py-2"> Agendar hora </h2>
+                </div>
+            </div>
+        </div>
+        <form class="container my-5">
+
+            <!-- TITULOS Y ENTRADAS -->
+            <div class="row mb-3">
+                <div class="col-sm-4 text-end align-self-top pt-2">
+                    <label for="exampleFormControlInput1" class="form-label fw-bold">Nombre Completo</label>
+                </div>
+                <div class="col-sm-4">
+                    <input id="user_rut" type="text" class="form-control">
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-sm-4 text-end align-self-top pt-2">
+                    <label for="exampleFormControlInput1" class="form-label fw-bold"> Teléfono</label>
+                </div>
+                <div class="col-sm-4">
+                    <input id="user_rut" type="number" class="form-control">
+                    <label class="text-black-50 fw-light"> (987654321)</label>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-sm-4 text-end align-self-top pt-2">
+                    <label for="exampleFormControlInput1" class="form-label fw-bold">Especialidad</label>
+                </div>
+                <div class="col-sm-4">
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected>Selecionar Especialidad</option>
+                      <option value="cardiología">Cardiología</option>
+                      <option value="dermatología">Dermatología</option>
+                      <option value="neurología">Neurología</option>
+                      <option value="pediatría">Pediatría</option>
+                      <option value="psicología">Psicología</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-sm-4 text-end align-self-top pt-2">
+                    <label for="exampleFormControlInput1" class="form-label fw-bold">Fecha</label>
+                </div>
+                <div class="col-sm-4">
+                    <input class="form-control" type="date" id="fecha" name="fecha" required="">
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-sm-4 text-end align-self-top pt-2">
+                    <label for="exampleFormControlInput1" class="form-label fw-bold">Hora</label>
+                </div>
+                <div class="col-sm-4">
+                    <input class="form-control" type="time" id="hora" name="hora" required="">
+                </div>
+            </div>
+
+            <div class="d-grid gap-2 col-6 mx-auto">
+                <button type="submit" class="btn mx-auto text-white" style="background-color: #8ecfe6;">Agendar</button>
+            </div>
+        </form>
+        <a href="#" class="btn btn-outline-info">Inicio</a>
+        </div>
+
+
+        <!-- CONSULTAR HORAS -->
+        <div id="Horas">
+        <div class="container">
+            <div class="row">
+                <div class="col-8 mx-auto">
+                    <h1 class="text-center m-5 text-white rounded-3"> Horas Agendadas </h1>
+                </div>
+            </div>
+        </div>
+        <form class="container my-5">
+            <div class="row mb-3">
+                <div class="col-sm-4 text-end align-self-top pt-2">
+                    <label for="exampleFormControlInput1" class="form-label fw-bold">RUT</label>
+                </div>
+                <div class="col-sm-4">
+                    <input id="pacient_rut" type="text" class="form-control-lg">
+                    <label class="text-black-50 fw-light"> Rut sin puntos y DV separado por un guión. (12345678-9)</label>
+                </div>
+            </div>
+            <div class="d-grid gap-2 col-6 mx-auto">
+                <button id="search_button" type="button" class="btn mx-auto text-white" style="background-color: #8ecfe6;">Consultar</button>
+            </div>
+        </form>
+        <a href="#" class="btn btn-outline-info">Inicio</a>
+        </div>
+
+
+        <div id="TablaMedicos"style="background-color: #ddffff">
+        <div class="container">
+            <div class="row">
+                <div class="col-8 mx-auto">
+                        <h2 class="text-center text-white rounded-3 py-3" > Especialidades y Médicos </h2>
+                    </div>
+                </div>
+            </div>
+            <div class="container-md mx-auto pb-3">
+            <table class="table table-light table-striped table-bordered table-hover">
+            <thead>
+              <tr>
+                <th>Especialidad</th>
+                <th>Medicos</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Cardiología</td>
+                <td>Juan Cifuentes</td>
+              </tr>
+              <tr>
+                <td>Dermatología</td>
+                <td>Sebastian Uribe</td>
+              </tr>
+              <tr>
+                <td>Endocrinología</td>
+                <td>Scarlette Castillo </td>
+              </tr>
+              <tr>
+                <td>Gastroenterología</td>
+                <td>Horacio Valdivia</td>
+              </tr>
+              <tr>
+                <td>Neurología</td>
+                <td>Raul Rojas</td>
+              </tr>
+              <tr>
+                <td>Oftalmología</td>
+                <td>Rafael Marquéz</td>
+              </tr>
+              <tr>
+                <td>Pediatría</td>
+                <td>Alex Sepulveda</td>
+              </tr>
+              <tr>
+                <td>Psiquiatría</td>
+                <td>Ignacio Flores</td>
+              </tr>
+            </tbody>
+          </table>
+          </div>
+        <a href="#" class="btn btn-outline-info">Inicio</a>
+        </div>
+
+        <!-- INGRESO FUNCIONARIOS -->
+        <div id="Acceso">
+        <div class="container">
+            <div class="row">
+                <div class="col-8 mx-auto">
+                    <h2 class="text-center text-white rounded-3 m-4"> Acceso Funcionarios </h2>
+                </div>
+            </div>
+        </div>
+        <form id="login_form" class="container my-5">
+            <div class="row mb-3">
+                <div class="col-sm-4 text-end align-self-top pt-2">
+                    <label for="exampleFormControlInput1" class="form-label fw-bold">RUT</label>
+                </div>
+                <div class="col-sm-4">
+                    <input id="user_rut" type="text" class="form-control-lg">
+                    <label class="text-black-50 fw-light"> Rut sin puntos y DV separado por un guión. (12345678-9)</label>
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-sm-4 text-end align-self-center">
+                    <label for="password1" class="form-label fw-bold">Contraseña</label>
+                </div>
+                <div class="col-sm-4">
+                    <input id="password1" type="password" class="form-control-lg"> 
+                </div>
+            </div>
+            <div class="d-grid gap-2 col-6 mx-auto">
+                <button type="submit" class="btn mx-auto text-white" style="background-color: #8ecfe6;">Ingresar</button>
+            </div>
+        </form>
+        </div>
+
+        <a type="button" href="#" class="btn btn-outline-info">Inicio</a>
+        <script src="./bootstrap-5.3.0-alpha3-dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
+
